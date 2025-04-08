@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+* {
+    box-sizing: border-box;
+}
+
+.bod {
+    font-family: "Ubunto" , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    background: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/f8/5c/05/picture-lake.jpg?w%3D1200%26h%3D-1%26s%3D1")
+        no-repeat center center/ cover ; 
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;     /* Set the z-index for an image, so that it is displayed behind the text: */
+    filter: blur(0px);
+}
+
+.loading-text {
+    font-size: 5px;
+    color: white;
+}
