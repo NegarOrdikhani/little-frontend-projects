@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap");
+
+:root {
+    --Philippine-Silver: #f4f4f6;
+    --Pale-silver: #2e2e2e;
+    --Pastel-gray: rgb(207,207,196);
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    font-family: "Montserrat" , Sans-serif ; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--Philippine-Silver);
+    color: var(--Pale-silver);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    height: 600px;
+}
+
+.panel {
+    position: relative;
+    border-radius: 20px;
+    background: var(--Philippine-Silver);
+    height: 48px;
+    margin: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: flex 0.5s linear;
+    overflow: hidden;
+}
+
+.panel-active {
+    flex-grow: 5;
+}
+
+.setting-title {
+    display: flex;
+    margin: 12px 20px;
+}
+
+.setting-title h3 {
+    margin: 0 10px;
+}
+
+.panel-active .setting-title{
+    color: var(--Pastel-gray);
+}
+
+.setting-content {
+    opacity: 0;
+    margin: 16px 20px;
+    line-height: 28px;
+    transition: opacity 0.2s ease-in;
+}
+
+.panel-active .setting-content{
+    opacity: 1;
+    transition: opacity 0.2 ease-in 0.3s;
+}
